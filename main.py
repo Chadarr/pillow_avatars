@@ -25,6 +25,8 @@ green_image_mid = green_image.crop(mid_crop_coordinates)
 image_merge_band = (red_image_blend, green_image_mid, blue_image_blend)
 new_image = Image.merge('RGB', image_merge_band)
 new_image.save(OUT_IMAGE_NAME)
+print(f'Смещенная картинка сохранена в {OUT_IMAGE_NAME}')
 
 new_image.thumbnail((80, 80))
 new_image.save(OUT_THUMB_IMAGE_NAME)
+print(f'Превью смещенной картинки сохранено в {OUT_THUMB_IMAGE_NAME}')
